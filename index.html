@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercedes-Benz 230 SL Pagoda (W113) | Láminas Técnicas & Checklist de Restauración</title>
+  
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= TOP HEADER ================= -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="mercedes-star-badge">
+          <svg viewBox="0 0 100 100" class="star-svg">
+            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="4.5" fill="none" />
+            <polygon points="50,6 55.5,43 50,50 44.5,43" fill="currentColor" />
+            <polygon points="50,50 55.5,43 89,73 84,77" fill="currentColor" />
+            <polygon points="50,50 44.5,43 11,73 16,77" fill="currentColor" />
+            <circle cx="50" cy="50" r="3" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <div class="car-badge-pill">MERCEDES-BENZ KLASSIK • W113.042</div>
+          <h1 class="main-title">PAGODA 230 SL <span class="edition-tag">1963–1967</span></h1>
+          <p class="subtitle">Láminas Oficiales de Despiece, Auditoría de Faltantes & Catálogo de Repuestos OEM</p>
+        </div>
+      </div>
+
+      <!-- Workshop & Vehicle Meta -->
+      <div class="vehicle-meta-card">
+        <div class="meta-row">
+          <span class="meta-label"><i class="bi bi-hash"></i> Chasis / VIN:</span>
+          <input type="text" id="vinInput" class="meta-input" value="113.042-10-XXXXXX" placeholder="N° de Chasis">
+        </div>
+        <div class="meta-row">
+          <span class="meta-label"><i class="bi bi-person-fill"></i> Propietario:</span>
+          <input type="text" id="ownerInput" class="meta-input" value="Cliente Taller" placeholder="Nombre del Dueño">
+        </div>
+        <div class="meta-row">
+          <span class="meta-label"><i class="bi bi-journal-bookmark-fill"></i> Manual Ref:</span>
+          <button class="manual-badge-btn" id="btnOpenManualModal">
+            <i class="bi bi-book"></i> Cat. 10 808 (250/280 SL)
+          </button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="btnNewPart" class="btn btn-primary">
+          <i class="bi bi-plus-circle-fill"></i> Agregar Repuesto
+        </button>
+        <button id="btnOwnerReport" class="btn btn-gold">
+          <i class="bi bi-file-earmark-text-fill"></i> Reporte Dueño
+        </button>
+        <button id="btnExportCsv" class="btn btn-secondary">
+          <i class="bi bi-file-earmark-spreadsheet-fill"></i> Excel / CSV
+        </button>
+        <button id="btnWhatsappSummary" class="btn btn-whatsapp">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="main-layout">
+
+    <!-- KPI STATS OVERVIEW -->
+    <section class="stats-grid">
+      <div class="stat-card stat-total">
+        <div class="stat-icon-wrapper"><i class="bi bi-box-seam-fill"></i></div>
+        <div class="stat-data">
+          <span class="stat-number" id="statTotal">0</span>
+          <span class="stat-title">Piezas Registradas</span>
+        </div>
+      </div>
+
+      <div class="stat-card stat-missing active-glow" id="cardFilterMissing">
+        <div class="stat-icon-wrapper"><i class="bi bi-exclamation-octagon-fill"></i></div>
+        <div class="stat-data">
+          <span class="stat-number text-danger" id="statMissing">0</span>
+          <span class="stat-title">FALTA COMPRAR</span>
+        </div>
+        <div class="stat-subtag" id="statMissingHigh">0 Urgentes</div>
+      </div>
+
+      <div class="stat-card stat-repair" id="cardFilterRepair">
+        <div class="stat-icon-wrapper"><i class="bi bi-tools"></i></div>
+        <div class="stat-data">
+          <span class="stat-number text-warning" id="statRepair">0</span>
+          <span class="stat-title">En Taller - A Reparar</span>
+        </div>
+        <div class="stat-subtag">Mano de Obra</div>
+      </div>
+
+      <div class="stat-card stat-ok" id="cardFilterOk">
+        <div class="stat-icon-wrapper"><i class="bi bi-check-circle-fill"></i></div>
+        <div class="stat-data">
+          <span class="stat-number text-success" id="statOk">0</span>
+          <span class="stat-title">En Taller - OK</span>
+        </div>
+        <div class="stat-subtag">Listas para Armar</div>
+      </div>
+
+      <!-- General Progress -->
+      <div class="stat-card stat-progress">
+        <div class="progress-info-line">
+          <span class="progress-label">Auditoría / Completitud</span>
+          <span class="progress-percent" id="statProgressPct">0%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="statProgressBar" style="width: 0%"></div>
+        </div>
+        <div class="progress-legend">
+          <span><i class="bi bi-shield-shaded"></i> 70% Desarmada</span>
+          <span id="statProgressCount">0 / 0 verificadas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VISOR DE LÁMINAS TÉCNICAS DE DESPIECE REALES ================= -->
+    <section class="plates-viewer-section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 class="section-title"><i class="bi bi-file-earmark-ruled-fill"></i> LÁMINAS TÉCNICAS DE DESPIECE (EXPLODED VIEWS)</h2>
+          <span class="section-hint">Toca cualquier número o punto sobre el dibujo para identificar el repuesto, su código OEM Mercedes y marcar si falta o está en el taller</span>
+        </div>
+        <div class="view-toggles">
+          <button class="pill-btn" id="btnToggleZoom"><i class="bi bi-arrows-fullscreen"></i> Ampliar Lámina</button>
+        </div>
+      </div>
+
+      <!-- Selector de Láminas Técnicas (Tabs) -->
+      <div class="plates-tabs-bar" id="platesTabsContainer">
+        <!-- Generado dinámicamente -->
+      </div>
+
+      <!-- Card Principal del Visor de Lámina -->
+      <div class="plate-display-card">
+        <div class="plate-meta-header">
+          <div>
+            <h3 class="plate-title" id="activePlateTitle">LÁMINA 1: MÁSCARA FRONTAL & CROMADOS</h3>
+            <p class="plate-subtitle" id="activePlateSubtitle">Despiece de parrilla, estrella central, paragolpes, punteras y faros Bosch</p>
+          </div>
+          <div class="plate-stats-badge" id="plateStatsBadge">
+            <span class="badge-tag tag-missing"><i class="bi bi-exclamation-octagon"></i> <strong id="plateMissingCount">0</strong> faltantes en esta lámina</span>
+          </div>
+        </div>
+
+        <!-- Canvas / Imagen interactiva con pines superpuestos -->
+        <div class="plate-canvas-frame" id="plateCanvasFrame">
+          <img src="plates/plate_front_chrome.jpg" alt="Lámina Técnica de Despiece" id="activePlateImage" class="plate-img">
+          
+          <!-- Contenedor de Pines Interactivos (absolutos en %) -->
+          <div class="pins-layer" id="pinsLayer">
+            <!-- Inyectados por JavaScript -->
+          </div>
+
+          <!-- Tooltip flotante al pasar sobre un pin -->
+          <div class="plate-pin-tooltip" id="plateTooltip" style="display: none;"></div>
+        </div>
+
+        <!-- Inspector Rápido de la Pieza Seleccionada en la Lámina -->
+        <div class="plate-inspector-footer" id="plateInspectorFooter" style="display: none;">
+          <div class="insp-footer-left">
+            <span class="insp-callout-badge" id="inspCalloutNum">1</span>
+            <div class="insp-info-texts">
+              <h4 class="insp-item-name" id="inspItemName">Estrella cromada central</h4>
+              <div class="insp-codes-line">
+                <span class="code-oem-tag" id="inspItemCode">A 113 888 01 18</span>
+                <span class="group-tag" id="inspItemGroup">Gr. 88</span>
+                <span class="desc-tag" id="inspItemDesc">Fundición cromada original</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="insp-footer-right">
+            <div class="quick-status-selector">
+              <span class="status-label">Estado:</span>
+              <button class="status-btn-pill btn-status-missing" data-status="missing" id="inspBtnMissing">
+                <i class="bi bi-exclamation-octagon-fill"></i> Falta Comprar
+              </button>
+              <button class="status-btn-pill btn-status-repair" data-status="repair" id="inspBtnRepair">
+                <i class="bi bi-tools"></i> A Reparar
+              </button>
+              <button class="status-btn-pill btn-status-ok" data-status="ok" id="inspBtnOk">
+                <i class="bi bi-check-circle-fill"></i> En Taller OK
+              </button>
+            </div>
+
+            <div class="insp-external-actions">
+              <a href="#" target="_blank" id="inspBtnSls" class="btn btn-secondary btn-sm" title="Abrir en catálogo SLS">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en SLS
+              </a>
+              <button class="btn btn-primary btn-sm" id="inspBtnScrollList" title="Ir a la ficha en la lista">
+                <i class="bi bi-card-checklist"></i> Ver en Lista
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTROLES DE FILTRADO & BÚSQUEDA ================= -->
+    <section class="controls-toolbar">
+      <div class="search-box">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por código OEM (ej. 113 888...), nombre, grupo o notas de taller...">
+        <button id="btnClearSearch" class="btn-clear-search" title="Limpiar búsqueda"><i class="bi bi-x-circle-fill"></i></button>
+      </div>
+
+      <div class="filters-row">
+        <!-- Status Filter -->
+        <div class="filter-group">
+          <span class="filter-label"><i class="bi bi-funnel-fill"></i> Estado:</span>
+          <div class="btn-group-toggle" id="statusFilterGroup">
+            <button class="filter-btn active" data-status="all">Todos</button>
+            <button class="filter-btn text-danger-soft" data-status="missing">🔴 Faltantes</button>
+            <button class="filter-btn text-warning-soft" data-status="repair">🟡 A Reparar</button>
+            <button class="filter-btn text-success-soft" data-status="ok">🟢 En Taller OK</button>
+          </div>
+        </div>
+
+        <!-- Priority Filter -->
+        <div class="filter-group">
+          <span class="filter-label"><i class="bi bi-flag-fill"></i> Prioridad:</span>
+          <select id="priorityFilterSelect" class="custom-select">
+            <option value="all">Todas las prioridades</option>
+            <option value="high">🚨 Alta (Críticos de armado)</option>
+            <option value="medium">⚠️ Media (Secundarios)</option>
+            <option value="low">🔹 Baja (Estética final)</option>
+          </select>
+        </div>
+
+        <!-- Group Filter -->
+        <div class="filter-group">
+          <span class="filter-label"><i class="bi bi-diagram-3-fill"></i> Grupo OEM:</span>
+          <select id="groupFilterSelect" class="custom-select">
+            <option value="all">Todos los Grupos Mercedes</option>
+          </select>
+        </div>
+
+        <div class="results-count-badge" id="resultsCount">
+          Mostrando <strong>0</strong> repuestos
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LISTA DE REPUESTOS Y CHECKLIST ================= -->
+    <section class="parts-list-section">
+      <div class="parts-container" id="partsContainer">
+        <!-- Part cards rendered here dynamically -->
+      </div>
+      
+      <!-- Empty state -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <i class="bi bi-inbox empty-icon"></i>
+        <h3>No se encontraron piezas con los filtros actuales</h3>
+        <p>Prueba limpiando la búsqueda o cambiando los filtros de zona o estado.</p>
+        <button class="btn btn-secondary" id="btnResetFilters">Restablecer Filtros</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODAL: AGREGAR / EDITAR REPUESTO ================= -->
+  <div class="modal-backdrop" id="partModal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle"><i class="bi bi-plus-circle"></i> Agregar Repuesto del Manual</h3>
+        <button class="modal-close-btn" id="btnClosePartModal"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <form id="partForm" class="modal-form">
+        <input type="hidden" id="formPartId">
+
+        <div class="form-row">
+          <div class="form-group flex-2">
+            <label for="formCode">Código OEM Mercedes-Benz <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <span class="input-prefix">A</span>
+              <input type="text" id="formCode" class="form-control font-mono" placeholder="113 888 01 18" required>
+            </div>
+            <small class="help-text">Formato oficial: A 113 xxx xx xx o A 000 xxx xx xx</small>
+          </div>
+
+          <div class="form-group flex-1">
+            <label for="formGroup">Grupo de Fábrica <span class="req">*</span></label>
+            <input type="text" id="formGroup" class="form-control" placeholder="Gr. 88" required list="mercedesGroupsList">
+            <datalist id="mercedesGroupsList">
+              <option value="Gr. 07 (Inyección)">
+              <option value="Gr. 20 (Bomba de agua)">
+              <option value="Gr. 32 (Suspensión)">
+              <option value="Gr. 33 (Eje delantero)">
+              <option value="Gr. 35 (Eje trasero)">
+              <option value="Gr. 40 (Tazas y ruedas)">
+              <option value="Gr. 42 (Frenos)">
+              <option value="Gr. 46 (Dirección)">
+              <option value="Gr. 47 (Combustible)">
+              <option value="Gr. 49 (Escape)">
+              <option value="Gr. 50 (Refrigeración)">
+              <option value="Gr. 67 (Cristales)">
+              <option value="Gr. 72 (Puertas)">
+              <option value="Gr. 75 (Baúl)">
+              <option value="Gr. 77 (Techo Pagoda)">
+              <option value="Gr. 82 (Electricidad/Faros)">
+              <option value="Gr. 83 (Calefacción)">
+              <option value="Gr. 88 (Cromados/Paragolpes)">
+              <option value="Gr. 91 (Asientos)">
+            </datalist>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="formName">Nombre del Repuesto / Descripción <span class="req">*</span></label>
+          <input type="text" id="formName" class="form-control" placeholder="Ej. Estrella de parrilla central con soporte" required>
+        </div>
+
+        <div class="form-group">
+          <label for="formDescription">Detalle Técnico / Descripción del Catálogo</label>
+          <textarea id="formDescription" class="form-control" rows="2" placeholder="Detalle adicional según lámina de despiece..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label for="formZone">Zona en el Auto <span class="req">*</span></label>
+            <select id="formZone" class="form-control" required>
+              <option value="carroceria">Cromados & Carrocería</option>
+              <option value="puertas">Puertas & Cristales</option>
+              <option value="techo">Techo Pagoda & Hardtop</option>
+              <option value="electricidad">Faros & Ópticas Bosch</option>
+              <option value="tren-delantero">Tren Delantero & Tazas</option>
+              <option value="frenos">Frenos ATE</option>
+              <option value="motor">Motor & Inyección M127</option>
+              <option value="interior">Interior & Volante</option>
+              <option value="tren-trasero">Tren Trasero & Escape</option>
+            </select>
+          </div>
+
+          <div class="form-group flex-1">
+            <label for="formStatus">Estado Actual <span class="req">*</span></label>
+            <select id="formStatus" class="form-control" required>
+              <option value="missing">🔴 FALTA COMPRAR</option>
+              <option value="repair">🟡 EN TALLER - A REPARAR</option>
+              <option value="ok">🟢 EN TALLER - OK</option>
+            </select>
+          </div>
+
+          <div class="form-group flex-1">
+            <label for="formPriority">Prioridad</label>
+            <select id="formPriority" class="form-control">
+              <option value="high">🚨 Alta</option>
+              <option value="medium" selected>⚠️ Media</option>
+              <option value="low">🔹 Baja</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label for="formQtyReq">Cant. Requerida</label>
+            <input type="number" id="formQtyReq" class="form-control" value="1" min="1">
+          </div>
+          <div class="form-group flex-1">
+            <label for="formQtyPres">Cant. en Taller</label>
+            <input type="number" id="formQtyPres" class="form-control" value="0" min="0">
+          </div>
+          <div class="form-group flex-2">
+            <label for="formLocation">Ubicación en Taller</label>
+            <input type="text" id="formLocation" class="form-control" placeholder="Ej. Caja 3 / Estante A">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="formNotes">Notas de Taller / Observaciones</label>
+          <input type="text" id="formNotes" class="form-control" placeholder="Ej. Falta tornillería especial M8 paso fino o lado izquierdo">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnCancelPartModal">Cancelar</button>
+          <button type="submit" class="btn btn-primary" id="btnSavePart">Guardar Repuesto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: REPORTE FORMAL PARA EL PROPIETARIO ================= -->
+  <div class="modal-backdrop" id="reportModal" style="display: none;">
+    <div class="modal-card modal-large printable-modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="bi bi-file-earmark-pdf-fill"></i> Informe de Repuestos Faltantes para el Dueño</h3>
+        <div class="header-btns-group">
+          <button class="btn btn-primary btn-sm" onclick="window.print()"><i class="bi bi-printer-fill"></i> Imprimir / Guardar PDF</button>
+          <button class="modal-close-btn" id="btnCloseReportModal"><i class="bi bi-x-lg"></i></button>
+        </div>
+      </div>
+
+      <div class="report-content" id="reportContent">
+        <!-- Dynamically rendered printable report -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: MANUAL DE TALLER & REFERENCIAS ================= -->
+  <div class="modal-backdrop" id="manualModal" style="display: none;">
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="bi bi-book-half"></i> Manual de Fábrica & Catálogos de Referencia</h3>
+        <button class="modal-close-btn" id="btnCloseManualModal"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <div class="manual-info-grid">
+        <div class="manual-photo-column">
+          <h4>Manual Físico del Taller (Foto Portada)</h4>
+          <div class="manual-img-frame">
+            <img src="manual_cover.jpg" alt="Manual de Taller Mercedes 10808" class="manual-cover-preview">
+          </div>
+          <p class="caption-text"><strong>Mercedes-Benz Ersatzteilliste 10808 (Ed. Octubre 1972)</strong>: Type 250 SL - 280 SL (W113) Chassis and Body.</p>
+        </div>
+
+        <div class="manual-links-column">
+          <h4>Enlaces Oficiales y Tiendas con Despiece Interactivo:</h4>
+          <ul class="resource-links-list">
+            <li>
+              <a href="https://www.sls-hh-shop.de/en/mercedes-230-280sl-w113" target="_blank" class="resource-link-card">
+                <div class="res-icon"><i class="bi bi-link-45deg"></i></div>
+                <div class="res-info">
+                  <strong>SLS Hamburg (Catálogo Interactivo W113)</strong>
+                  <span>Despiece lámina por lámina con códigos Mercedes OEM y fotos de piezas nuevas.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.niemoeller.de/en/w113" target="_blank" class="resource-link-card">
+                <div class="res-icon"><i class="bi bi-link-45deg"></i></div>
+                <div class="res-info">
+                  <strong>Niemöller Deutschland (Katalog D)</strong>
+                  <span>Catálogo de piezas W108-W113 con buscador por código OEM y números de pedido.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sl113.org" target="_blank" class="resource-link-card">
+                <div class="res-icon"><i class="bi bi-link-45deg"></i></div>
+                <div class="res-info">
+                  <strong>The Pagoda SL Group (Technical Manual)</strong>
+                  <span>La biblia técnica de restauración de Pagodas: torques, esquemas y compatibilidades.</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="tips-box">
+            <h5><i class="bi bi-lightbulb-fill"></i> ¿Cómo usarlo con tu manual en el taller?</h5>
+            <ol>
+              <li>Selecciona en las pestañas la lámina del sistema que estés armando (Trompa, Puertas, Motor, etc.).</li>
+              <li>Toca el número en el dibujo que corresponda a la pieza que tienes en la mesa.</li>
+              <li>Marca con un clic si <strong>Falta comprar</strong> o si está <strong>En taller para reparar</strong>.</li>
+              <li>Si tienes una lámina nueva de tu libro, puedes sacarle foto y cargar los códigos directamente con el botón <strong>"+ Agregar Repuesto"</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="plates-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

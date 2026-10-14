@@ -1,0 +1,14 @@
+# Archivos del sistema
+*.HEIC
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de cache del navegador
+pagoda3d.js

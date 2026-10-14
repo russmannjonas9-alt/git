@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="gridSub1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#132a4a" stroke-width="0.8"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#1d3d6b" stroke-width="1.2"/>
+    </pattern>
+    <linearGradient id="metalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#2a4d7d"/>
+      <stop offset="100%" stop-color="#152843"/>
+    </linearGradient>
+    <linearGradient id="chromeGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#091426"/>
+  <rect width="100%" height="100%" fill="url(#gridSub1)"/>
+
+  <!-- Technical Border -->
+  <rect x="25" y="25" width="1870" height="1030" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="33" y="33" width="1854" height="1014" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Title Header Block -->
+  <rect x="25" y="25" width="1870" height="75" fill="#0d1e38" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="70" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="2">MERCEDES-BENZ W113 230 SL PAGODA — SUBDIAGRAMA TÉCNICO: MECANISMO LEVANTAVIDRIOS &amp; PUERTA</text>
+  <text x="60" y="93" font-family="'Consolas', 'Courier New', monospace" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="1">BAUGRUPPE 72: TÜREN, FENSTERHEBER-SCHERENSYSTEM &amp; DREHFALLENSCHLOSS | WERKSTATT-HANDBUCH 10 808</text>
+
+  <!-- Drawing Container -->
+  <!-- Door Inner Shell Silhouette Outline (Ghosted in Cyan) -->
+  <path d="M 220 280 C 380 260 900 250 1380 260 C 1460 260 1520 320 1540 400 L 1580 720 C 1580 840 1480 890 1320 900 L 340 900 C 260 900 220 840 220 720 Z" 
+        fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- ================= COMPONENT 1: DOOR GLASS ================= -->
+  <!-- Window Glass (Callout 1) -->
+  <polygon points="460,180 1260,190 1230,440 470,430" fill="url(#chromeGrad1)" stroke="#38bdf8" stroke-width="2.5"/>
+  <line x1="470" y1="210" x2="1240" y2="220" stroke="#ffffff" stroke-width="1" stroke-dasharray="4 4" opacity="0.8"/>
+  <text x="780" y="270" font-family="sans-serif" font-size="16" font-weight="bold" fill="#93c5fd" opacity="0.7">SEKURIT ESG — GLAS</text>
+
+  <!-- ================= COMPONENT 6: GLASS BOTTOM RAIL ================= -->
+  <!-- Bottom Glass Channel / Lift Rail (Callout 6) -->
+  <rect x="440" y="430" width="820" height="26" rx="4" fill="#1e3a5f" stroke="#ffffff" stroke-width="2"/>
+  <rect x="450" y="435" width="800" height="6" fill="#38bdf8" opacity="0.6"/>
+  <!-- Rubber Felt Lining -->
+  <line x1="445" y1="440" x2="1255" y2="440" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="10 4"/>
+
+  <!-- ================= COMPONENT 5: SLIDER ROLLERS / GUIDES ================= -->
+  <!-- Left and Right Sliding Rollers in the Rail -->
+  <circle cx="560" cy="443" r="14" fill="#f8fafc" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="560" cy="443" r="5" fill="#091426"/>
+  <circle cx="1120" cy="443" r="14" fill="#f8fafc" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="1120" cy="443" r="5" fill="#091426"/>
+
+  <!-- ================= COMPONENT 2: SCISSOR ARMS ================= -->
+  <!-- Cross Arm A (From bottom-left pivot to top-right roller) -->
+  <line x1="580" y1="780" x2="1120" y2="443" stroke="#e2e8f0" stroke-width="14" stroke-linecap="round"/>
+  <line x1="580" y1="780" x2="1120" y2="443" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Cross Arm B (From toothed gear to top-left roller) -->
+  <line x1="880" y1="670" x2="560" y2="443" stroke="#e2e8f0" stroke-width="14" stroke-linecap="round"/>
+  <line x1="880" y1="670" x2="560" y2="443" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Central Pivot Pin between the two scissor arms -->
+  <circle cx="815" cy="565" r="16" fill="#38bdf8" stroke="#ffffff" stroke-width="3.5"/>
+  <circle cx="815" cy="565" r="7" fill="#091426"/>
+
+  <!-- Lower Horizontal Guide Track for lower sliding arm -->
+  <rect x="520" y="770" width="220" height="20" rx="3" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="580" cy="780" r="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+
+  <!-- ================= COMPONENT 3: TOOTHED SECTOR & PINION ================= -->
+  <!-- Large Toothed Gear Sector (Segment) -->
+  <path d="M 880 670 L 980 570 A 170 170 0 0 1 1060 760 Z" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Gear Teeth Outer Arc -->
+  <path d="M 980 570 A 170 170 0 0 1 1060 760" fill="none" stroke="#38bdf8" stroke-width="10" stroke-dasharray="6 5"/>
+  <!-- Pinion Drive Gear -->
+  <circle cx="1065" cy="650" r="28" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="1065" cy="650" r="28" fill="none" stroke="#38bdf8" stroke-width="6" stroke-dasharray="5 4"/>
+  <circle cx="1065" cy="650" r="10" fill="#f8fafc"/>
+
+  <!-- ================= COMPONENT 4: SPIRAL COMPENSATION SPRING ================= -->
+  <!-- Heavy flat spiral clock spring at sector pivot -->
+  <path d="M 880 670 
+           A 12 12 0 0 1 892 682 
+           A 22 22 0 0 1 870 704 
+           A 34 34 0 0 1 846 660 
+           A 48 48 0 0 1 910 632 
+           A 64 64 0 0 1 936 718" 
+        fill="none" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="880" cy="670" r="9" fill="#ffffff" stroke="#091426" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 7: WINDOW CRANK HANDLE ================= -->
+  <!-- Exploded Crank Shaft from Pinion -->
+  <line x1="1065" y1="650" x2="1240" y2="650" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Rosette / Escutcheon -->
+  <ellipse cx="1220" cy="650" rx="10" ry="24" fill="#1e293b" stroke="#ffffff" stroke-width="2"/>
+  <!-- Chrome Crank Handle -->
+  <path d="M 1240 650 L 1320 635 C 1335 630 1345 640 1340 655 L 1330 730 C 1325 745 1305 745 1305 730 Z" 
+        fill="url(#metalGrad1)" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="1240" cy="650" r="16" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="1320" cy="735" r="14" fill="#0f172a" stroke="#ffffff" stroke-width="2.5"/> <!-- Black knob -->
+
+  <!-- ================= COMPONENT 8 & 9: DOOR LATCH & OUTER HANDLE ================= -->
+  <!-- Latch Box in Door B-Pillar Side (Callout 8) -->
+  <rect x="1440" y="470" width="95" height="130" rx="6" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+  <rect x="1455" y="485" width="65" height="50" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <!-- Rotating Star Latch Wheel (Drehfalle) -->
+  <circle cx="1490" cy="510" r="18" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+  <line x1="1490" y1="492" x2="1490" y2="528" stroke="#ffffff" stroke-width="3"/>
+  <line x1="1472" y1="510" x2="1508" y2="510" stroke="#ffffff" stroke-width="3"/>
+  <!-- Connecting Rod to inside release -->
+  <path d="M 1440 560 L 1150 560" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Outer Chrome Handle (Callout 9) -->
+  <path d="M 1280 440 C 1340 435 1420 435 1440 445 C 1450 450 1445 465 1430 465 L 1290 465 C 1275 465 1270 450 1280 440 Z" 
+        fill="url(#metalGrad1)" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Push Button Lock Cylinder -->
+  <circle cx="1425" cy="452" r="9" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 10: B-PILLAR STRIKER ================= -->
+  <!-- Striker / Door Wedge Plate (Callout 10) -->
+  <rect x="1620" y="480" width="70" height="110" rx="6" fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+  <rect x="1635" y="505" width="22" height="60" rx="3" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Exploded alignment line to latch -->
+  <line x1="1535" y1="535" x2="1620" y2="535" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- ================= CALLOUT BUBBLES WITH LEADER LINES ================= -->
+  <!-- Callout 1: Glass -->
+  <line x1="720" y1="185" x2="720" y2="130" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="720" cy="115" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="720" y="123" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- Callout 2: Scissor Assembly -->
+  <line x1="815" y1="565" x2="730" y2="565" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="705" cy="565" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="705" y="573" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- Callout 3: Gear Sector -->
+  <line x1="1020" y1="650" x2="1020" y2="730" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1020" cy="755" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1020" y="763" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- Callout 4: Spiral Spring -->
+  <line x1="880" y1="710" x2="880" y2="780" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="880" cy="805" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="880" y="813" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- Callout 5: Rollers / Sliders -->
+  <line x1="560" y1="443" x2="560" y2="380" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="560" cy="355" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="560" y="363" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+
+  <!-- Callout 6: Lift Rail -->
+  <line x1="940" y1="455" x2="940" y2="390" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="940" cy="365" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="940" y="373" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">6</text>
+
+  <!-- Callout 7: Crank Handle -->
+  <line x1="1310" y1="740" x2="1310" y2="820" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1310" cy="845" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1310" y="853" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">7</text>
+
+  <!-- Callout 8: Latch Box -->
+  <line x1="1490" y1="600" x2="1490" y2="670" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1490" cy="695" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1490" y="703" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">8</text>
+
+  <!-- Callout 9: Outer Handle -->
+  <line x1="1360" y1="435" x2="1360" y2="360" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1360" cy="335" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1360" y="343" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">9</text>
+
+  <!-- Callout 10: Striker Plate -->
+  <line x1="1655" y1="480" x2="1655" y2="400" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1655" cy="375" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1655" y="383" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">10</text>
+
+  <!-- Technical Legend Footer (Sindelfingen DIN Style) -->
+  <rect x="25" y="960" width="1870" height="95" fill="#091426" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="995" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#ffffff">1. Türscheibe (Sekurit) | 2. Fensterheber Schere | 3. Zahnsegment u. Ritzel | 4. Ausgleichsfeder | 5. Führungsgleitstück</text>
+  <text x="50" y="1030" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#38bdf8">6. Hebeschiene Gummi | 7. Fensterkurbel Chrom | 8. Drehfallenschloss | 9. Türaußengriff Druckknopf | 10. Schließkeil B-Säule</text>
+  <text x="1620" y="1010" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#94a3b8">FIG. W113-72/A</text>
+  <text x="1620" y="1035" font-family="'Consolas', monospace" font-size="12" fill="#64748b">DAIMLER-BENZ AG STUTTGART</text>
+</svg>

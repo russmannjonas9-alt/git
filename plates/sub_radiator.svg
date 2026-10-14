@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="gridSub3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#132a4a" stroke-width="0.8"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#1d3d6b" stroke-width="1.2"/>
+    </pattern>
+    <linearGradient id="brassRadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#92400e"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="finGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#081426"/>
+  <rect width="100%" height="100%" fill="url(#gridSub3)"/>
+
+  <!-- Technical Border -->
+  <rect x="25" y="25" width="1870" height="1030" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="33" y="33" width="1854" height="1014" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Title Header Block -->
+  <rect x="25" y="25" width="1870" height="75" fill="#0d1e38" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="70" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="2">MERCEDES-BENZ W113 230 SL — SUBDIAGRAMA: RADIADOR, BOMBA DE AGUA &amp; REFRIGERACIÓN</text>
+  <text x="60" y="93" font-family="'Consolas', 'Courier New', monospace" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="1">BAUGRUPPE 20: MOTORKÜHLUNG, KÜHLERNECKE, WASSERPUMPE &amp; THERMOSTATGEHÄUSE</text>
+
+  <!-- ================= COMPONENT 1: BRASS/COPPER RADIATOR ASSEMBLY ================= -->
+  <!-- Radiator Core (Panal) (Callout 1) -->
+  <rect x="340" y="320" width="460" height="420" rx="4" fill="url(#finGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Cooling Fins Pattern -->
+  <g stroke="#38bdf8" stroke-width="1" opacity="0.4">
+    <line x1="360" y1="320" x2="360" y2="740"/><line x1="380" y1="320" x2="380" y2="740"/>
+    <line x1="400" y1="320" x2="400" y2="740"/><line x1="420" y1="320" x2="420" y2="740"/>
+    <line x1="440" y1="320" x2="440" y2="740"/><line x1="460" y1="320" x2="460" y2="740"/>
+    <line x1="480" y1="320" x2="480" y2="740"/><line x1="500" y1="320" x2="500" y2="740"/>
+    <line x1="520" y1="320" x2="520" y2="740"/><line x1="540" y1="320" x2="540" y2="740"/>
+    <line x1="560" y1="320" x2="560" y2="740"/><line x1="580" y1="320" x2="580" y2="740"/>
+    <line x1="600" y1="320" x2="600" y2="740"/><line x1="620" y1="320" x2="620" y2="740"/>
+    <line x1="640" y1="320" x2="640" y2="740"/><line x1="660" y1="320" x2="660" y2="740"/>
+    <line x1="680" y1="320" x2="680" y2="740"/><line x1="700" y1="320" x2="700" y2="740"/>
+    <line x1="720" y1="320" x2="720" y2="740"/><line x1="740" y1="320" x2="740" y2="740"/>
+    <line x1="760" y1="320" x2="760" y2="740"/><line x1="780" y1="320" x2="780" y2="740"/>
+  </g>
+  <!-- Upper Brass Tank (Wasserkasten oben) -->
+  <path d="M 320 320 C 320 250 820 250 820 320 Z" fill="url(#brassRadGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Lower Brass Tank (Wasserkasten unten) -->
+  <path d="M 320 740 L 820 740 L 800 810 L 340 810 Z" fill="url(#brassRadGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Upper Inlet Neck (Einlaufstutzen) -->
+  <rect x="420" y="240" width="55" height="40" rx="3" fill="#1e3a5f" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 2: RADIATOR CAP ================= -->
+  <!-- Filler Neck & Pressure Cap (Callout 2) -->
+  <rect x="680" y="225" width="60" height="30" rx="3" fill="#b45309" stroke="#ffffff" stroke-width="2"/>
+  <!-- Cap Ears / Octagonal Behr Cap -->
+  <polygon points="665,225 755,225 765,210 745,200 675,200 655,210" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="710" cy="212" r="10" fill="#78350f" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- ================= COMPONENT 3: OVERFLOW TUBE ================= -->
+  <!-- Overflow Spout & Rubber Hose (Callout 3) -->
+  <path d="M 740 238 L 840 238 L 840 680" fill="none" stroke="#f59e0b" stroke-width="4"/>
+
+  <!-- ================= COMPONENT 12: DRAIN PLUG ================= -->
+  <!-- Radiator Drain Tap with Wing-Nut (Callout 12) -->
+  <rect x="360" y="810" width="30" height="35" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1.5"/>
+  <ellipse cx="375" cy="855" rx="18" ry="7" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 4: FAN SHROUD ================= -->
+  <!-- Sheet Metal Air Shroud / Cowl (Lüfterhaube) (Callout 4) -->
+  <rect x="880" y="320" width="120" height="420" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <ellipse cx="940" cy="530" rx="45" ry="160" fill="#091426" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 5: UPPER RADIATOR HOSE ================= -->
+  <!-- Molded Upper Coolant Hose (Callout 5) -->
+  <path d="M 445 240 C 445 160 1100 160 1150 310" fill="none" stroke="#0f172a" stroke-width="26" stroke-linecap="round"/>
+  <path d="M 445 240 C 445 160 1100 160 1150 310" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <!-- Hose Clamps -->
+  <circle cx="445" cy="230" r="15" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="1145" cy="300" r="15" fill="none" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- ================= COMPONENT 6: LOWER RADIATOR HOSE ================= -->
+  <!-- S-shaped Lower Coolant Hose (Callout 6) -->
+  <path d="M 770 780 C 860 840 1050 820 1140 660" fill="none" stroke="#0f172a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 770 780 C 860 840 1050 820 1140 660" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ================= COMPONENT 7: WATER PUMP ================= -->
+  <!-- Cast Iron Water Pump Housing (Callout 7) -->
+  <path d="M 1160 520 L 1280 460 L 1340 520 L 1320 660 L 1220 680 L 1150 600 Z" 
+        fill="#1e3a5f" stroke="#ffffff" stroke-width="3"/>
+  <!-- Impeller Blades inside pump cavity -->
+  <circle cx="1245" cy="580" r="50" fill="#091426" stroke="#38bdf8" stroke-width="2.5"/>
+  <path d="M 1245 535 C 1265 550 1265 570 1245 580 M 1245 625 C 1225 610 1225 590 1245 580 M 1205 570 C 1220 590 1240 590 1245 580 M 1285 590 C 1270 570 1250 570 1245 580" 
+        stroke="#ffffff" stroke-width="3" fill="none"/>
+
+  <!-- ================= COMPONENT 8 & 9: THERMOSTAT HOUSING & THERMOSTAT ================= -->
+  <!-- Aluminium Thermostat Housing on front of cylinder head (Callout 8) -->
+  <path d="M 1120 310 L 1230 310 L 1260 410 L 1150 430 Z" fill="#2563eb" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Wahler / Behr 79°C Thermostat with Bimetal Spring (Callout 9) -->
+  <rect x="1165" y="340" width="45" height="50" rx="3" fill="url(#brassRadGrad)" stroke="#ffffff" stroke-width="2"/>
+  <!-- Spring Coil representation -->
+  <line x1="1170" y1="365" x2="1205" y2="365" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="1187" cy="350" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- ================= COMPONENT 10: WATER PUMP PULLEY ================= -->
+  <!-- V-Belt Pulley (Keilriemenscheibe) (Callout 10) -->
+  <ellipse cx="1380" cy="580" rx="18" ry="85" fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+  <ellipse cx="1380" cy="580" rx="8" ry="40" fill="#091426" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 11: 4-BLADE COOLING FAN ================= -->
+  <!-- 4-Blade Metal Radiator Fan (Lüfterflügel) (Callout 11) -->
+  <g id="fourBladeFan">
+    <!-- Center Hub -->
+    <circle cx="1480" cy="580" r="32" fill="#091426" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="1480" cy="580" r="10" fill="#38bdf8"/>
+    <!-- Blade Top -->
+    <path d="M 1465 550 L 1450 380 C 1475 360 1505 360 1520 380 L 1495 550 Z" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Blade Bottom -->
+    <path d="M 1465 610 L 1450 780 C 1475 800 1505 800 1520 780 L 1495 610 Z" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Blade Left -->
+    <path d="M 1450 565 L 1290 550 C 1270 575 1270 605 1290 620 L 1450 595 Z" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Blade Right -->
+    <path d="M 1510 565 L 1670 550 C 1690 575 1690 605 1670 620 L 1510 595 Z" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+  </g>
+
+  <!-- ================= CALLOUT BUBBLES WITH LEADER LINES ================= -->
+  <!-- 1: Radiator Core -->
+  <line x1="560" y1="520" x2="560" y2="440" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="560" cy="415" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="560" y="423" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- 2: Radiator Cap -->
+  <line x1="710" y1="200" x2="710" y2="140" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="710" cy="115" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="710" y="123" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- 3: Overflow Tube -->
+  <line x1="840" y1="280" x2="890" y2="220" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="915" cy="200" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="915" y="208" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- 4: Fan Shroud -->
+  <line x1="940" y1="320" x2="940" y2="240" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="940" cy="215" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="940" y="223" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- 5: Upper Hose -->
+  <line x1="760" y1="160" x2="760" y2="110" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="760" cy="85" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="760" y="93" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+
+  <!-- 6: Lower Hose -->
+  <line x1="930" y1="810" x2="930" y2="880" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="930" cy="905" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="930" y="913" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">6</text>
+
+  <!-- 7: Water Pump -->
+  <line x1="1245" y1="670" x2="1245" y2="760" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1245" cy="785" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1245" y="793" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">7</text>
+
+  <!-- 8: Thermostat Housing -->
+  <line x1="1200" y1="310" x2="1200" y2="230" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1200" cy="205" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1200" y="213" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">8</text>
+
+  <!-- 9: Thermostat Wahler 79C -->
+  <line x1="1200" y1="380" x2="1290" y2="340" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1320" cy="325" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1320" y="333" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">9</text>
+
+  <!-- 10: Pulley -->
+  <line x1="1380" y1="665" x2="1380" y2="760" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1380" cy="785" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1380" y="793" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">10</text>
+
+  <!-- 11: 4-Blade Fan -->
+  <line x1="1520" y1="380" x2="1590" y2="330" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1615" cy="310" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1615" y="318" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">11</text>
+
+  <!-- 12: Drain Tap -->
+  <line x1="375" y1="855" x2="375" y2="910" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="375" cy="935" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="375" y="943" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">12</text>
+
+  <!-- Technical Legend Footer -->
+  <rect x="25" y="960" width="1870" height="95" fill="#091426" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="995" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#ffffff">1. Messing-/Kupfer-Wasserkühler | 2. Verschlussdeckel 1.0 bar | 3. Überlaufrohr | 4. Lüfterzarge (Luftführung) | 5. Kühlwasserschlauch oben</text>
+  <text x="50" y="1030" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#38bdf8">6. Kühlwasserschlauch unten (S-Form) | 7. Wasserpumpe | 8. Thermostatgehäuse | 9. Thermostat-Einsatz 79°C | 10. Riemenscheibe | 11. Lüfter 4-flügelig | 12. Ablasshahn</text>
+  <text x="1620" y="1010" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#94a3b8">FIG. W113-20/C</text>
+  <text x="1620" y="1035" font-family="'Consolas', monospace" font-size="12" fill="#64748b">BEHR &amp; DAIMLER-BENZ AG</text>
+</svg>

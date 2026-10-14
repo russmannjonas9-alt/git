@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="gridSub2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#132a4a" stroke-width="0.8"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#1d3d6b" stroke-width="1.2"/>
+    </pattern>
+    <linearGradient id="pumpCastGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="60%" stop-color="#2a5288"/>
+      <stop offset="100%" stop-color="#112239"/>
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#081426"/>
+  <rect width="100%" height="100%" fill="url(#gridSub2)"/>
+
+  <!-- Technical Border -->
+  <rect x="25" y="25" width="1870" height="1030" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="33" y="33" width="1854" height="1014" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Title Header Block -->
+  <rect x="25" y="25" width="1870" height="75" fill="#0d1e38" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="70" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="2">MERCEDES-BENZ W113 230 SL — SUBDIAGRAMA: BOMBA INYECTORA BOSCH PES 6 KL &amp; REGULACIÓN</text>
+  <text x="60" y="93" font-family="'Consolas', 'Courier New', monospace" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="1">BAUGRUPPE 07: KRAFTSTOFF-EINSPRITZANLAGE BOSCH 2-STEMPEL-PUMPE &amp; DROSSELKLAPPENGESTÄNGE</text>
+
+  <!-- Drawing Center: Bosch 2-Plunger Mechanical Injection Pump Exploded Layout -->
+
+  <!-- ================= COMPONENT 1: MAIN PUMP HOUSING ================= -->
+  <!-- Main Aluminium Pump Casing (Callout 1) -->
+  <path d="M 460 380 L 780 380 L 820 440 L 820 740 L 780 780 L 460 780 L 420 720 L 420 440 Z" 
+        fill="url(#pumpCastGrad)" stroke="#ffffff" stroke-width="3"/>
+  <!-- Front Drive Flange & Shaft (Drive from engine timing gear) -->
+  <path d="M 420 540 L 320 540 L 320 620 L 420 620 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <circle cx="370" cy="580" r="28" fill="#091426" stroke="#ffffff" stroke-width="2"/>
+  <!-- Internal Camshaft representation (Dashed inside housing) -->
+  <line x1="330" y1="670" x2="790" y2="670" stroke="#38bdf8" stroke-width="3" stroke-dasharray="8 6"/>
+  <ellipse cx="560" cy="670" rx="36" ry="24" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <ellipse cx="680" cy="670" rx="36" ry="24" fill="none" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 2: 2-PLUNGER ASSEMBLIES ================= -->
+  <!-- Plunger Unit 1 (Cylinders 1-2-3) -->
+  <rect x="525" y="270" width="70" height="110" rx="4" fill="url(#steelGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <rect x="535" y="280" width="50" height="20" fill="#38bdf8" opacity="0.8"/>
+  <!-- Plunger Unit 2 (Cylinders 4-5-6) -->
+  <rect x="645" y="270" width="70" height="110" rx="4" fill="url(#steelGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <rect x="655" y="280" width="50" height="20" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- ================= COMPONENT 6: PRESSURE VALVES & OUTLETS ================= -->
+  <!-- 6 High Pressure Delivery Valves on Top (Callout 6) -->
+  <g id="valvesOutlets">
+    <rect x="528" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="537" cy="210" r="7" fill="#ffffff"/>
+    <rect x="551" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="560" cy="210" r="7" fill="#ffffff"/>
+    <rect x="574" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="583" cy="210" r="7" fill="#ffffff"/>
+
+    <rect x="648" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="657" cy="210" r="7" fill="#ffffff"/>
+    <rect x="671" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="680" cy="210" r="7" fill="#ffffff"/>
+    <rect x="694" y="210" width="18" height="60" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="703" cy="210" r="7" fill="#ffffff"/>
+  </g>
+
+  <!-- ================= COMPONENT 3: WARM-UP THERMOSTAT HOUSING ================= -->
+  <!-- Top Auxiliary Air & Warm-up Thermostat Block (Callout 3) -->
+  <path d="M 720 280 L 850 280 L 880 320 L 880 430 L 780 430 L 780 350 Z" 
+        fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Cooling Water Hose Connections into Thermostat -->
+  <path d="M 850 295 L 940 260 L 960 280 L 870 320 Z" fill="#2563eb" stroke="#38bdf8" stroke-width="2"/>
+  <ellipse cx="950" cy="270" rx="12" ry="16" fill="#091426" stroke="#ffffff" stroke-width="2"/>
+  <!-- Thermostatic Expansion Element (Dehnstoffelement) -->
+  <rect x="760" y="320" width="60" height="70" rx="4" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- ================= COMPONENT 4: BAROMETRIC ALTITUDE COMPENSATOR ================= -->
+  <!-- Rear Barometric Capsule (Luftdruckdose / Höhenkorrektor) (Callout 4) -->
+  <path d="M 820 570 L 960 540 L 980 560 L 980 690 L 960 710 L 820 680 Z" 
+        fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Bellows Disc Details inside Barometric Capsule -->
+  <path d="M 870 570 C 890 590 890 660 870 680 M 900 565 C 920 585 920 665 900 685 M 930 560 C 950 580 950 670 930 690" 
+        fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+
+  <!-- ================= COMPONENT 5: STARTING SOLENOID ================= -->
+  <!-- Electric Enrichment Solenoid (Callout 5) -->
+  <rect x="700" y="780" width="95" height="120" rx="8" fill="#0f172a" stroke="#ffffff" stroke-width="2.5"/>
+  <rect x="720" y="870" width="55" height="20" fill="#2563eb" stroke="#38bdf8" stroke-width="1.5"/>
+  <!-- 12V Electrical Terminal Bolt -->
+  <circle cx="747" cy="880" r="6" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- ================= COMPONENT 7: FUEL INLET MICRO-FILTER ================= -->
+  <!-- Banjo Bolt & Internal Micro-Screen Filter (Callout 7) -->
+  <circle cx="480" cy="740" r="22" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="480" cy="740" r="9" fill="#091426" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="480" y1="740" x2="380" y2="780" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 4"/>
+  <rect x="330" y="765" width="50" height="28" rx="4" fill="#1e3a5f" stroke="#ffffff" stroke-width="2"/>
+  <text x="355" y="784" font-family="'Consolas', monospace" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">FILTRO</text>
+
+  <!-- ================= COMPONENT 8 & 9: THROTTLE LINKAGE & BALL JOINTS ================= -->
+  <!-- Throttle Body (Drosselklappe) & Bellcrank (Callout 8 & 9) -->
+  <rect x="1140" y="380" width="140" height="140" rx="8" fill="#1e3a5f" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="1210" cy="450" r="48" fill="#091426" stroke="#38bdf8" stroke-width="2.5"/>
+  <!-- Butterfly Valve Plate -->
+  <line x1="1175" y1="415" x2="1245" y2="485" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Throttle Bellcrank & Pivot (Callout 8) -->
+  <polygon points="1210,450 1280,360 1295,370 1235,465" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+  <polygon points="1210,450 1270,540 1250,550 1200,465" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Connecting Rod with Ball Joints between Throttle and Injection Pump (Callout 9) -->
+  <!-- M5 Threaded Linkage Rod with adjustment turnbuckle -->
+  <line x1="800" y1="520" x2="1255" y2="545" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <line x1="800" y1="520" x2="1255" y2="545" stroke="#091426" stroke-width="2"/>
+  <!-- Ball Joint at Pump Lever -->
+  <circle cx="800" cy="520" r="14" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="800" cy="520" r="5" fill="#091426"/>
+  <!-- Turnbuckle Hex Adjuster -->
+  <rect x="990" y="524" width="40" height="16" rx="2" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Ball Joint at Throttle Bellcrank -->
+  <circle cx="1255" cy="545" r="14" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="1255" cy="545" r="5" fill="#091426"/>
+
+  <!-- ================= COMPONENT 10: COLD START VALVE (CSV) ================= -->
+  <!-- Cold Start Solenoid Valve mounted on Intake Manifold Plenum (Callout 10) -->
+  <g id="coldStartValve">
+    <rect x="1460" y="320" width="85" height="130" rx="6" fill="#1e293b" stroke="#ffffff" stroke-width="2.5"/>
+    <rect x="1480" y="440" width="45" height="40" rx="3" fill="#2563eb" stroke="#38bdf8" stroke-width="2"/>
+    <polygon points="1490,480 1515,480 1502,510" fill="url(#brassGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Fuel Feed Line to CSV -->
+    <path d="M 1460 360 L 1380 360 L 1380 240 L 700 240" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 4"/>
+  </g>
+
+  <!-- ================= CALLOUT BUBBLES WITH LEADER LINES ================= -->
+  <!-- 1: Pump Body -->
+  <line x1="460" y1="460" x2="330" y2="460" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="300" cy="460" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="300" y="468" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- 2: Plunger Assembly -->
+  <line x1="600" y1="320" x2="600" y2="150" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="600" cy="125" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="133" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- 3: Warm-up Thermostat -->
+  <line x1="840" y1="310" x2="840" y2="150" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="840" cy="125" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="840" y="133" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- 4: Barometric Capsule -->
+  <line x1="970" y1="620" x2="1080" y2="620" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1110" cy="620" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1110" y="628" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- 5: Starting Solenoid -->
+  <line x1="745" y1="900" x2="745" y2="940" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="745" cy="965" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="745" y="973" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+
+  <!-- 6: Delivery Valves -->
+  <line x1="640" y1="210" x2="720" y2="150" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="720" cy="125" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="720" y="133" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">6</text>
+
+  <!-- 7: Micro Filter -->
+  <line x1="480" y1="760" x2="480" y2="840" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="480" cy="865" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="480" y="873" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">7</text>
+
+  <!-- 8: Throttle Bellcrank -->
+  <line x1="1280" y1="360" x2="1280" y2="280" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1280" cy="255" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1280" y="263" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">8</text>
+
+  <!-- 9: Adjustable Linkage Rod -->
+  <line x1="1030" y1="535" x2="1030" y2="440" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1030" cy="415" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1030" y="423" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">9</text>
+
+  <!-- 10: Cold Start Valve -->
+  <line x1="1502" y1="320" x2="1502" y2="240" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="1502" cy="215" r="24" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="1502" y="223" font-family="'Consolas', monospace" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">10</text>
+
+  <!-- Technical Legend Footer -->
+  <rect x="25" y="960" width="1870" height="95" fill="#091426" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="995" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#ffffff">1. Pumpengehäuse PES 6 KL | 2. 2-Stempel-Baugruppe | 3. Warmlaufthermostat | 4. Luftdruckdose (Höhenkorrektor) | 5. Magnetschalter</text>
+  <text x="50" y="1030" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#38bdf8">6. Druckventile 6-fach | 7. Kraftstoff-Mikrofilter | 8. Drosselklappen-Umlenkhebel | 9. Regelstange mit Kugelköpfen | 10. Kaltstartventil</text>
+  <text x="1620" y="1010" font-family="'Consolas', monospace" font-size="14" font-weight="bold" fill="#94a3b8">FIG. W113-07/B</text>
+  <text x="1620" y="1035" font-family="'Consolas', monospace" font-size="12" fill="#64748b">ROBERT BOSCH &amp; DAIMLER-BENZ</text>
+</svg>
